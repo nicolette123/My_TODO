@@ -1,0 +1,148 @@
+body {
+  background-color: rgb(1, 11, 19);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+h1 {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: aqua;
+}
+
+.wrapper {
+  width: 700px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#todo-input {
+  box-sizing: border-box;
+  padding: 12px 20px;
+  width: 100%;
+  background: none;
+  border: 2px solid;
+  border-radius: 1000px;
+  font: inherit;
+  color: white;
+  caret-color: antiquewhite;
+}
+#todo-input:focus {
+  outline: none;
+}
+
+form {
+  position: relative;
+}
+
+#add-button {
+  top: 0;
+  position: absolute;
+  right: 0;
+  background-color: aqua;
+  height: 100%;
+  padding: 0 30px;
+  border-radius: 1000px;
+  font: inherit;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.todo {
+  margin-bottom: 10px;
+  padding: 0 16px;
+  background-color: rgb(60, 59, 59);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.todo .todo-text {
+  padding: 15px;
+  padding-right: 0;
+  flex-grow: 1;
+  transition: 200ms ease;
+}
+
+.delete-button {
+  padding: 3px;
+  background: none;
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.delete-button:hover {
+  background-color: aqua;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid aqua;
+  border-radius: 50%;
+  margin-right: 12px;
+  flex-shrink: 0;
+  transition: background-color 200ms ease;
+  cursor: pointer;
+  position: relative;
+}
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  top: 1px;
+  left: 6px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked + .custom-checkbox {
+  background-color: aqua;
+}
+
+input[type=checkbox]:checked + .custom-checkbox::after {
+  opacity: 1;
+}
+
+input[type=checkbox]:checked + .custom-checkbox + .todo-text {
+  text-decoration: line-through;
+  color: aliceblue;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 12pt;
+  }
+  #add-button {
+    position: unset;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+    height: auto;
+  }
+  h1 {
+    margin-top: 50px;
+    font-size: 15vw;
+  }
+}/*# sourceMappingURL=style.css.map */
