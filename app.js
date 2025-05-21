@@ -18,6 +18,10 @@ function addTodo() {
     updateTodoList();
     todoInput.value = '';
   }
+ else{
+    alert("please enter a task");
+ }
+  
 }
 
 function updateTodoList() {
