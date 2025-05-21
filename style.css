@@ -56,6 +56,9 @@ form {
   color: white;
   cursor: pointer;
 }
+#add-button:hover {
+  background-color: aquamarine;
+}
 
 .todo {
   margin-bottom: 10px;

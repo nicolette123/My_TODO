@@ -65,6 +65,9 @@ form {
   font-weight: 600;
   color: $color;
   cursor: pointer;
+  &:hover{
+    background-color: aquamarine;
+  }
 }
 
 .todo {
